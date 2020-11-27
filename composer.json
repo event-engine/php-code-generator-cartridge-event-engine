@@ -38,10 +38,7 @@
     "require": {
         "php": "^7.3 || ^8.0",
         "ext-json": "*",
-        "event-engine/php-inspectio-graph": "dev-feature/cody as 0.2.0",
-        "open-code-modeling/json-schema-to-php": "dev-master",
-        "open-code-modeling/json-schema-to-php-ast": "dev-master",
-        "open-code-modeling/php-code-ast": "dev-master",
+        "event-engine/php-code-generator-event-engine-ast": "dev-master",
         "open-code-modeling/php-code-generator": "^0.2.0",
         "open-code-modeling/php-code-generator-transformator": "^0.1.0",
         "symfony/console": "^4.4 || ^5.0"
@@ -62,8 +59,8 @@
     "scripts": {
         "check": [
             "@cs",
-            "@docheader",
-            "@test"
+            "@test",
+            "@analyse"
         ],
         "cs": "php-cs-fixer fix src -v --diff --dry-run",
         "cs-fix": "php-cs-fixer fix src -v --diff",
